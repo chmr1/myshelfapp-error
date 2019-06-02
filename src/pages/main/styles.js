@@ -8,7 +8,7 @@ export default {
         padding: 20
     },
 
-    productContainer: {
+    bookContainer: {
         backgroundColor: '#FFF',
         borderWidth: 1,
         borderColor: '#DDD',
@@ -17,33 +17,34 @@ export default {
         marginBottom: 20,
     },
 
-    productTitle: {
+    bookTitle: {
         fontSize: 18,
         fontWeight: 'bold',
         color: '#333'
     },
 
-    productDescription: {
+    bookDescription: {
         fontSize: 16,
         color: '#999',
         marginTop: 5,
         lineHeight: 24
     },
 
-    productButton: {
-        height: 42,
-        borderRadius: 5,
-        borderWidth: 2,
-        borderColor: '#DA552F',
-        backgroundColor: 'transparent',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 10
+    booktButton: {
+        padding: 10,
+        marginTop: 20
     },
 
-    productButtonText: {
+    bookButtonText: {
+        color: '#999',
+        fontWeight: 'bold',
         fontSize: 16,
-        color: '#DA552F',
-        fontWeight: 'bold'
-    }
+        textAlign: 'center'
+    },
+
+    actionButtonIcon: {
+        fontSize: 20,
+        height: 22,
+        color: 'white',
+    },
 }

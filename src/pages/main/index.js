@@ -17,11 +17,13 @@ export default class Main extends Component {
     };
 
     componentDidMount() {
-      this.loadBooks();
-    }
+      const { navigation } = this.props;
+      const shelf = navigation.getParam('shelf', 'NO-ID');
+      this.loadBooks(shelf);
+    };
 
-    loadBooks = async () => {
-      const response = await api.get('/books');
+    loadBooks = async (shelf) => {      
+      const response = await api.get(`/shelves/${shelf}`);
       const { data } = response.data;
       this.setState({ data });
     };
@@ -58,7 +60,7 @@ export default class Main extends Component {
           <View style={styles.container}>
             <FlatList
               contentContainerStyle={styles.list}
-              data={this.state.data}
+              data={this.state.data.books}
               keyExtractor={item => item.id}
               renderItem={this.renderItem}
             />

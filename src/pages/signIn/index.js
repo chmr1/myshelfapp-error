@@ -63,6 +63,7 @@ export default class SignIn extends Component {
             NavigationActions.navigate({ routeName: 'Main', params: { token: response.data.token } }),
           ],
         });
+
         this.props.navigation.dispatch(resetAction);
       } catch (_err) {
         this.setState({ error: 'Houve um problema com o login, verifique suas credenciais!' });
@@ -74,7 +75,7 @@ export default class SignIn extends Component {
     return (
       <Container>
         <StatusBar hidden />
-        <Logo source={require('../../images/airbnb_logo.png')} resizeMode="contain" />
+        <Logo source={require('../../images/myshelf.png')} resizeMode="contain" />
         <Input
           placeholder="Endereço de e-mail"
           value={this.state.email}
